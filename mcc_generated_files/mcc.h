@@ -48,11 +48,14 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
-#include "ic2.h"
-#include "ic1.h"
-#include "interrupt_manager.h"
-#include "pwm.h"
 #include "ic3.h"
+#include "ic2.h"
+#include "pwm.h"
+#include "interrupt_manager.h"
+#include "i2c1.h"
+#include "tmr1.h"
+#include "ic1.h"
+#include "tmr3.h"
 
 #define _XTAL_FREQ  120000000UL
 

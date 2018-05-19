@@ -68,7 +68,7 @@
 
 // FOSCSEL
 #pragma config FNOSC = PRIPLL    // Oscillator Source Selection->Primary Oscillator with PLL module (XT + PLL, HS + PLL, EC + PLL)
-#pragma config PWMLOCK = ON    // PWM Lock Enable bit->Certain PWM registers may only be written after key sequence
+#pragma config PWMLOCK = OFF    // PWM Lock Enable bit->PWM registers may be written without key sequence
 #pragma config IESO = ON    // Two-speed Oscillator Start-up Enable bit->Start up device with FRC, then switch to user-selected oscillator source
 
 // FGS
@@ -102,8 +102,11 @@ void SYSTEM_Initialize(void)
     INTERRUPT_Initialize();
     OSCILLATOR_Initialize();
     IC2_Initialize();
+    I2C1_Initialize();
     PWM_Initialize();
+    TMR3_Initialize();
     IC1_Initialize();
+    TMR1_Initialize();
     IC3_Initialize();
     INTERRUPT_GlobalEnable();
     CORCON_ModeOperatingSet(CORCON_MODE_PORVALUES);
