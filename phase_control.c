@@ -70,39 +70,39 @@ void Commut_Phase(void){
     switch (CommutTable[HallValue]){
         case 1: // DRV8313 State : 1
             EN2 = 1;
-            IOCON2bits.OVRENH = 0;
+            IOCON2bits.OVRENH = 1;
             EN3 = 1;
-            IOCON3bits.OVRENH = 1;
+            IOCON3bits.OVRENH = 0;
             break;
         case 2:
             EN1 = 1;
-            IOCON1bits.OVRENH = 0;
+            IOCON1bits.OVRENH = 1;
             EN3 = 1;
-            IOCON3bits.OVRENH = 1; 
+            IOCON3bits.OVRENH = 0; 
             break;
         case 3: 
             EN1 = 1;
-            IOCON1bits.OVRENH = 0;
+            IOCON1bits.OVRENH = 1;
             EN2 = 1;
-            IOCON2bits.OVRENH = 1; 
+            IOCON2bits.OVRENH = 0; 
             break;
         case 4: 
             EN2 = 1;
-            IOCON2bits.OVRENH = 1;
+            IOCON2bits.OVRENH = 0;
             EN3 = 1;
-            IOCON3bits.OVRENH = 0; 
+            IOCON3bits.OVRENH = 1; 
             break;
         case 5: 
             EN1 = 1;
-            IOCON1bits.OVRENH = 1; 
+            IOCON1bits.OVRENH = 0; 
             EN3 = 1;
-            IOCON3bits.OVRENH = 0; 
+            IOCON3bits.OVRENH = 1; 
             break;
         case 6: 
             EN1 = 1;
-            IOCON1bits.OVRENH = 1; 
+            IOCON1bits.OVRENH = 0; 
             EN2 = 1;
-            IOCON2bits.OVRENH = 0; 
+            IOCON2bits.OVRENH = 1; 
             break;
         default:
             break;

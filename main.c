@@ -8,7 +8,7 @@
     main.c
 
   Summary:
-    This is the main file generated using PIC24 / dsPIC33 / PIC32MM MCUs
+    This is the main file generated usiONng PIC24 / dsPIC33 / PIC32MM MCUs
 
   Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
@@ -66,7 +66,7 @@ int main(void)
     LATAbits.LATA4 = 1;
     LATBbits.LATB5 = 1;
 
-    PWM_MasterDutyCycleSet(300);
+    PWM_MasterDutyCycleSet(0);
     while (1)
     {        
         // Add your application code

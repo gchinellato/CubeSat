@@ -218,11 +218,11 @@
   @Example
     <code>
     // Set RA4 high (1)
-    IO_RA4_SetHigh();
+    DRV_RESET_SetHigh();
     </code>
 
 */
-#define IO_RA4_SetHigh()          _LATA4 = 1
+#define DRV_RESET_SetHigh()          _LATA4 = 1
 /**
   @Summary
     Sets the GPIO pin, RA4, low using LATA4.
@@ -242,11 +242,11 @@
   @Example
     <code>
     // Set RA4 low (0)
-    IO_RA4_SetLow();
+    DRV_RESET_SetLow();
     </code>
 
 */
-#define IO_RA4_SetLow()           _LATA4 = 0
+#define DRV_RESET_SetLow()           _LATA4 = 0
 /**
   @Summary
     Toggles the GPIO pin, RA4, using LATA4.
@@ -266,11 +266,11 @@
   @Example
     <code>
     // Toggle RA4
-    IO_RA4_Toggle();
+    DRV_RESET_Toggle();
     </code>
 
 */
-#define IO_RA4_Toggle()           _LATA4 ^= 1
+#define DRV_RESET_Toggle()           _LATA4 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RA4.
@@ -292,11 +292,11 @@
     uint16_t portValue;
 
     // Read RA4
-    postValue = IO_RA4_GetValue();
+    postValue = DRV_RESET_GetValue();
     </code>
 
 */
-#define IO_RA4_GetValue()         _RA4
+#define DRV_RESET_GetValue()         _RA4
 /**
   @Summary
     Configures the GPIO pin, RA4, as an input.
@@ -316,11 +316,11 @@
   @Example
     <code>
     // Sets the RA4 as an input
-    IO_RA4_SetDigitalInput();
+    DRV_RESET_SetDigitalInput();
     </code>
 
 */
-#define IO_RA4_SetDigitalInput()  _TRISA4 = 1
+#define DRV_RESET_SetDigitalInput()  _TRISA4 = 1
 /**
   @Summary
     Configures the GPIO pin, RA4, as an output.
@@ -340,11 +340,11 @@
   @Example
     <code>
     // Sets the RA4 as an output
-    IO_RA4_SetDigitalOutput();
+    DRV_RESET_SetDigitalOutput();
     </code>
 
 */
-#define IO_RA4_SetDigitalOutput() _TRISA4 = 0
+#define DRV_RESET_SetDigitalOutput() _TRISA4 = 0
 /**
   @Summary
     Sets the GPIO pin, RB11, high using LATB11.
@@ -493,6 +493,152 @@
 #define IO_RB11_SetDigitalOutput() _TRISB11 = 0
 /**
   @Summary
+    Sets the GPIO pin, RB12, high using LATB12.
+
+  @Description
+    Sets the GPIO pin, RB12, high using LATB12.
+
+  @Preconditions
+    The RB12 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RB12 high (1)
+    PWM2_SetHigh();
+    </code>
+
+*/
+#define PWM2_SetHigh()          _LATB12 = 1
+/**
+  @Summary
+    Sets the GPIO pin, RB12, low using LATB12.
+
+  @Description
+    Sets the GPIO pin, RB12, low using LATB12.
+
+  @Preconditions
+    The RB12 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RB12 low (0)
+    PWM2_SetLow();
+    </code>
+
+*/
+#define PWM2_SetLow()           _LATB12 = 0
+/**
+  @Summary
+    Toggles the GPIO pin, RB12, using LATB12.
+
+  @Description
+    Toggles the GPIO pin, RB12, using LATB12.
+
+  @Preconditions
+    The RB12 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RB12
+    PWM2_Toggle();
+    </code>
+
+*/
+#define PWM2_Toggle()           _LATB12 ^= 1
+/**
+  @Summary
+    Reads the value of the GPIO pin, RB12.
+
+  @Description
+    Reads the value of the GPIO pin, RB12.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RB12
+    postValue = PWM2_GetValue();
+    </code>
+
+*/
+#define PWM2_GetValue()         _RB12
+/**
+  @Summary
+    Configures the GPIO pin, RB12, as an input.
+
+  @Description
+    Configures the GPIO pin, RB12, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RB12 as an input
+    PWM2_SetDigitalInput();
+    </code>
+
+*/
+#define PWM2_SetDigitalInput()  _TRISB12 = 1
+/**
+  @Summary
+    Configures the GPIO pin, RB12, as an output.
+
+  @Description
+    Configures the GPIO pin, RB12, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RB12 as an output
+    PWM2_SetDigitalOutput();
+    </code>
+
+*/
+#define PWM2_SetDigitalOutput() _TRISB12 = 0
+/**
+  @Summary
     Sets the GPIO pin, RB13, high using LATB13.
 
   @Description
@@ -510,11 +656,11 @@
   @Example
     <code>
     // Set RB13 high (1)
-    IO_RB13_SetHigh();
+    EN2_SetHigh();
     </code>
 
 */
-#define IO_RB13_SetHigh()          _LATB13 = 1
+#define EN2_SetHigh()          _LATB13 = 1
 /**
   @Summary
     Sets the GPIO pin, RB13, low using LATB13.
@@ -534,11 +680,11 @@
   @Example
     <code>
     // Set RB13 low (0)
-    IO_RB13_SetLow();
+    EN2_SetLow();
     </code>
 
 */
-#define IO_RB13_SetLow()           _LATB13 = 0
+#define EN2_SetLow()           _LATB13 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB13, using LATB13.
@@ -558,11 +704,11 @@
   @Example
     <code>
     // Toggle RB13
-    IO_RB13_Toggle();
+    EN2_Toggle();
     </code>
 
 */
-#define IO_RB13_Toggle()           _LATB13 ^= 1
+#define EN2_Toggle()           _LATB13 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB13.
@@ -584,11 +730,11 @@
     uint16_t portValue;
 
     // Read RB13
-    postValue = IO_RB13_GetValue();
+    postValue = EN2_GetValue();
     </code>
 
 */
-#define IO_RB13_GetValue()         _RB13
+#define EN2_GetValue()         _RB13
 /**
   @Summary
     Configures the GPIO pin, RB13, as an input.
@@ -608,11 +754,11 @@
   @Example
     <code>
     // Sets the RB13 as an input
-    IO_RB13_SetDigitalInput();
+    EN2_SetDigitalInput();
     </code>
 
 */
-#define IO_RB13_SetDigitalInput()  _TRISB13 = 1
+#define EN2_SetDigitalInput()  _TRISB13 = 1
 /**
   @Summary
     Configures the GPIO pin, RB13, as an output.
@@ -632,11 +778,157 @@
   @Example
     <code>
     // Sets the RB13 as an output
-    IO_RB13_SetDigitalOutput();
+    EN2_SetDigitalOutput();
     </code>
 
 */
-#define IO_RB13_SetDigitalOutput() _TRISB13 = 0
+#define EN2_SetDigitalOutput() _TRISB13 = 0
+/**
+  @Summary
+    Sets the GPIO pin, RB14, high using LATB14.
+
+  @Description
+    Sets the GPIO pin, RB14, high using LATB14.
+
+  @Preconditions
+    The RB14 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RB14 high (1)
+    PWM1_SetHigh();
+    </code>
+
+*/
+#define PWM1_SetHigh()          _LATB14 = 1
+/**
+  @Summary
+    Sets the GPIO pin, RB14, low using LATB14.
+
+  @Description
+    Sets the GPIO pin, RB14, low using LATB14.
+
+  @Preconditions
+    The RB14 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RB14 low (0)
+    PWM1_SetLow();
+    </code>
+
+*/
+#define PWM1_SetLow()           _LATB14 = 0
+/**
+  @Summary
+    Toggles the GPIO pin, RB14, using LATB14.
+
+  @Description
+    Toggles the GPIO pin, RB14, using LATB14.
+
+  @Preconditions
+    The RB14 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RB14
+    PWM1_Toggle();
+    </code>
+
+*/
+#define PWM1_Toggle()           _LATB14 ^= 1
+/**
+  @Summary
+    Reads the value of the GPIO pin, RB14.
+
+  @Description
+    Reads the value of the GPIO pin, RB14.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RB14
+    postValue = PWM1_GetValue();
+    </code>
+
+*/
+#define PWM1_GetValue()         _RB14
+/**
+  @Summary
+    Configures the GPIO pin, RB14, as an input.
+
+  @Description
+    Configures the GPIO pin, RB14, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RB14 as an input
+    PWM1_SetDigitalInput();
+    </code>
+
+*/
+#define PWM1_SetDigitalInput()  _TRISB14 = 1
+/**
+  @Summary
+    Configures the GPIO pin, RB14, as an output.
+
+  @Description
+    Configures the GPIO pin, RB14, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RB14 as an output
+    PWM1_SetDigitalOutput();
+    </code>
+
+*/
+#define PWM1_SetDigitalOutput() _TRISB14 = 0
 /**
   @Summary
     Sets the GPIO pin, RB15, high using LATB15.
@@ -656,11 +948,11 @@
   @Example
     <code>
     // Set RB15 high (1)
-    IO_RB15_SetHigh();
+    EN1_SetHigh();
     </code>
 
 */
-#define IO_RB15_SetHigh()          _LATB15 = 1
+#define EN1_SetHigh()          _LATB15 = 1
 /**
   @Summary
     Sets the GPIO pin, RB15, low using LATB15.
@@ -680,11 +972,11 @@
   @Example
     <code>
     // Set RB15 low (0)
-    IO_RB15_SetLow();
+    EN1_SetLow();
     </code>
 
 */
-#define IO_RB15_SetLow()           _LATB15 = 0
+#define EN1_SetLow()           _LATB15 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB15, using LATB15.
@@ -704,11 +996,11 @@
   @Example
     <code>
     // Toggle RB15
-    IO_RB15_Toggle();
+    EN1_Toggle();
     </code>
 
 */
-#define IO_RB15_Toggle()           _LATB15 ^= 1
+#define EN1_Toggle()           _LATB15 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB15.
@@ -730,11 +1022,11 @@
     uint16_t portValue;
 
     // Read RB15
-    postValue = IO_RB15_GetValue();
+    postValue = EN1_GetValue();
     </code>
 
 */
-#define IO_RB15_GetValue()         _RB15
+#define EN1_GetValue()         _RB15
 /**
   @Summary
     Configures the GPIO pin, RB15, as an input.
@@ -754,11 +1046,11 @@
   @Example
     <code>
     // Sets the RB15 as an input
-    IO_RB15_SetDigitalInput();
+    EN1_SetDigitalInput();
     </code>
 
 */
-#define IO_RB15_SetDigitalInput()  _TRISB15 = 1
+#define EN1_SetDigitalInput()  _TRISB15 = 1
 /**
   @Summary
     Configures the GPIO pin, RB15, as an output.
@@ -778,11 +1070,11 @@
   @Example
     <code>
     // Sets the RB15 as an output
-    IO_RB15_SetDigitalOutput();
+    EN1_SetDigitalOutput();
     </code>
 
 */
-#define IO_RB15_SetDigitalOutput() _TRISB15 = 0
+#define EN1_SetDigitalOutput() _TRISB15 = 0
 /**
   @Summary
     Sets the GPIO pin, RB5, high using LATB5.
@@ -802,11 +1094,11 @@
   @Example
     <code>
     // Set RB5 high (1)
-    IO_RB5_SetHigh();
+    DRV_SLEEP_SetHigh();
     </code>
 
 */
-#define IO_RB5_SetHigh()          _LATB5 = 1
+#define DRV_SLEEP_SetHigh()          _LATB5 = 1
 /**
   @Summary
     Sets the GPIO pin, RB5, low using LATB5.
@@ -826,11 +1118,11 @@
   @Example
     <code>
     // Set RB5 low (0)
-    IO_RB5_SetLow();
+    DRV_SLEEP_SetLow();
     </code>
 
 */
-#define IO_RB5_SetLow()           _LATB5 = 0
+#define DRV_SLEEP_SetLow()           _LATB5 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB5, using LATB5.
@@ -850,11 +1142,11 @@
   @Example
     <code>
     // Toggle RB5
-    IO_RB5_Toggle();
+    DRV_SLEEP_Toggle();
     </code>
 
 */
-#define IO_RB5_Toggle()           _LATB5 ^= 1
+#define DRV_SLEEP_Toggle()           _LATB5 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB5.
@@ -876,11 +1168,11 @@
     uint16_t portValue;
 
     // Read RB5
-    postValue = IO_RB5_GetValue();
+    postValue = DRV_SLEEP_GetValue();
     </code>
 
 */
-#define IO_RB5_GetValue()         _RB5
+#define DRV_SLEEP_GetValue()         _RB5
 /**
   @Summary
     Configures the GPIO pin, RB5, as an input.
@@ -900,11 +1192,11 @@
   @Example
     <code>
     // Sets the RB5 as an input
-    IO_RB5_SetDigitalInput();
+    DRV_SLEEP_SetDigitalInput();
     </code>
 
 */
-#define IO_RB5_SetDigitalInput()  _TRISB5 = 1
+#define DRV_SLEEP_SetDigitalInput()  _TRISB5 = 1
 /**
   @Summary
     Configures the GPIO pin, RB5, as an output.
@@ -924,11 +1216,11 @@
   @Example
     <code>
     // Sets the RB5 as an output
-    IO_RB5_SetDigitalOutput();
+    DRV_SLEEP_SetDigitalOutput();
     </code>
 
 */
-#define IO_RB5_SetDigitalOutput() _TRISB5 = 0
+#define DRV_SLEEP_SetDigitalOutput() _TRISB5 = 0
 
 /**
     Section: Function Prototypes
