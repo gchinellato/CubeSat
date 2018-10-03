@@ -46,6 +46,7 @@
 
 #include "i2c1.h"
 #include "../i2c_comm.h"
+#include "../myglobal_defs.h"
 
 /**
  Section: Data Types

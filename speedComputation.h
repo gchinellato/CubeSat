@@ -69,11 +69,12 @@ extern "C" {
 
     // TODO If C++ is being used, regular C code needs function names to have C 
     // linkage so the functions can be used by the c code. 
-void GetPeriodData(void);
-void ComputeSpeed(void);
+//void GetPeriodData(void);
+//void ComputeSpeed(void);
 
 //Wmotor = 60 * 1/2 * Fcy/Npp * prescaler
-#define PERIOD2RPM (60*0.5*60000000/4*1/64)
+//#define PERIOD2RPM (60*0.5*60000000/4*1/64)
+//#define PERIOD2RPM  7031250
 
 #ifdef	__cplusplus
 }

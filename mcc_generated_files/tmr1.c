@@ -49,6 +49,8 @@
 
 #include <xc.h>
 #include "tmr1.h"
+#include "../myglobal_defs.h"
+#include "../pid.h"
 
 /**
   Section: Data Type Definitions
@@ -150,6 +152,18 @@ uint16_t TMR1_Counter16BitGet( void )
 void __attribute__ ((weak)) TMR1_CallBack(void)
 {
     // Add your custom callback code here
+    uint16_t period = actualCapture - pastCapture;
+    
+    motorSpeed = (int16_t)
+            ((uint32_t) (motorSpeed + PERIOD2RPM/period) >> 1);
+ 
+    //float u = computePID(motorSpeed); 
+    
+    //PWM_MasterDutyCycleSet(u);
+    //Commut_Phase();
+    
+    i2c1Buffer[30] = (uint8_t)((motorSpeed >> 8) & 0x00FF);
+    i2c1Buffer[31] = (uint8_t)(motorSpeed & 0x00FF);
 }
 
 void TMR1_Start( void )

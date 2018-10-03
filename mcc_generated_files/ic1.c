@@ -49,6 +49,7 @@
 #include "ic1.h"
 #include "../phase_control.h"
 
+
 /**
   IC Mode.
 
@@ -65,6 +66,10 @@ static uint16_t         gIC1Mode;
 /**
   Section: Driver Interface
 */
+
+
+extern volatile uint8_t HallValue;
+
 
 void IC1_Initialize (void)
 {
@@ -88,6 +93,7 @@ void __attribute__ ( ( interrupt, no_auto_psv ) ) _ISR _IC1Interrupt( void )
     }
     
     Commut_Phase();
+   
 }
 void IC1_Start( void )
 {

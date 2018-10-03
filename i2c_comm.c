@@ -1,4 +1,4 @@
-/*
+    /*
  * I2C1 user function(s) file
  * Master and BLDC boards use I2C1 to send/receive information
  * January, 2018
@@ -6,9 +6,11 @@
  */
 
 #include "mcc_generated_files/mcc.h"
+#include "i2c_comm.h"
 #include "phase_control.h"
+#include "myglobal_defs.h"
 
-#define M_BYTES_TO_WORD(byteH, byteL) ((uint16_t)(((uint16_t)byteL & 0x00FF) | (((uint16_t)byteH << 8) & 0xFF00)))
+//#define M_BYTES_TO_WORD(byteH, byteL) ((uint16_t)(((uint16_t)byteL & 0x00FF) | (((uint16_t)byteH << 8) & 0xFF00)))
 
 uint8_t i2c1Buffer[64] =
         {
@@ -76,8 +78,8 @@ bool I2C1_LogicHandleF(I2C1_SLAVE_DRIVER_STATUS status)
                     }
                     
                     // Just for debug
-                    i2c1Buffer[30] = i2c1Buffer[20];
-                    i2c1Buffer[31] = i2c1Buffer[21];
+                    //i2c1Buffer[30] = i2c1Buffer[20];
+                    //i2c1Buffer[31] = i2c1Buffer[21];
                         
                 }
             }

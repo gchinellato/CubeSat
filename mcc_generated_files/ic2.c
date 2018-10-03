@@ -48,7 +48,7 @@
 #include <xc.h>
 #include "ic2.h"
 #include "../phase_control.h"
-#include "../speedComputation.h"
+#include "../speed_meas.h"
 
 /**
   IC Mode.
@@ -89,7 +89,7 @@ void __attribute__ ( ( interrupt, no_auto_psv ) ) _ISR _IC2Interrupt( void )
     }
     
     Commut_Phase();
-    ComputeSpeed();
+    ComputePeriod();
 }
 void IC2_Start( void )
 {
